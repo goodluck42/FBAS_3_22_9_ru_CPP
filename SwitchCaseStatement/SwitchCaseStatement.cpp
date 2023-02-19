@@ -104,29 +104,29 @@ int main()
 	//	}
 	//}
 	////////////////
-	//char key;
+	char key;
 
-	//std::cin >> key;
+	std::cin >> key;
 
-	//switch (key)
-	//{
-	//	case 87:
-	//	case 119:
-	//		std::cout << "Moving forward" << '\n';
-	//		break;
-	//	//case 65: // will not work
-	//	case 'A':
-	//	case 'a':
-	//		std::cout << "Moving left" << '\n';
-	//		break;
+	switch (key)
+	{
+		case 87:
+		case 119:
+			std::cout << "Moving forward" << '\n';
+			break;
+		//case 65: // will not work
+		case 'A': // if (key == 'A' || key == 'a')
+		case 'a':
+			std::cout << "Moving left" << '\n';
+			break;
 
-	//	case 'S':
-	//	case 's':
-	//		std::cout << "Moving backward" << '\n';
-	//		break;
-	//	case 'D':
-	//	case 'd':
-	//		std::cout << "Moving right" << '\n';
-	//		break;
-	//}
+		case 'S':
+		case 's':
+			std::cout << "Moving backward" << '\n';
+			break;
+		case 'D':
+		case 'd':
+			std::cout << "Moving right" << '\n';
+			break;
+	}
 }
