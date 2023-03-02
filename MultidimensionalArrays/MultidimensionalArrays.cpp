@@ -2,16 +2,16 @@
 
 int main()
 {
-	//{
-	//	constexpr size_t rows = 3;
-	//	constexpr size_t columns = 4;
+	{
+		constexpr size_t rows = 3;
+		constexpr size_t columns = 4;
 
-	//	int matrix[rows][columns]{
-	//		// col	 0   1   2   3    // row
-	//				{90, 10, 20, 42}, // 0
-	//				{89, 18, 99, 78}, // 1
-	//				{14, 13, 12, 11}, // 2
-	//	};
+		int matrix[rows][columns]{
+			// col	 0   1   2   3    // row
+					{90, 10, 20, 42}, // 0
+					{89, 18, 99, 78}, // 1
+					{14, 13, 12, 11}, // 2
+		};
 
 	//	matrix[1][3] = 99;
 
