@@ -1,107 +1,90 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <windows.h>
-#include <string>
 
 
-// void cout(char* text); // char* != const char*
-// void cout(const char* text); // char* = const char*
+// void cout(char* text); // char* / char[]
+// void cout(const char* text); // char*, const char*
 
-void cout(const char* text) // char* = const char*
+
+void cout(const char* text)
 {
-    int i = 0;
+	int i = 0;
 
-    while (true)
-    {
-        if (*(text + i) == '\0')
-        {
-            break;
-        }
+	while (true) // while (text[i] != '\0')
+	{
+		if (text[i] == '\0')
+		{
+			break;
+		}
 
-        std::cout << *(text + i);
-
-        ++i;
-    }
-
-    std::cout << '\n';
+		std::cout << text[i++];
+	}
 }
 
 
-void return_many_values(int& count1, int& count2, int& count3)
+int foo(int& value1, int& value2, int& value3)
 {
-    count1 = 42;
-    count2 = 13;
-    count3 = 10;
+	value1 = 42; // a = 42
+	value2 = 13; // b = 13
+	value3 = 10; // c = 10
+	
+	return 1337;
 }
 
-void return_many_values(int* count1, int* count2, int* count3)
+int foo(int* value1, int* value2, int* value3)
 {
-    *count1 = 42;
-    *count2 = 13;
-    *count3 = 10;
+	*value1 = 42; // a = 42
+	*value2 = 13; // b = 13
+	*value3 = 10; // c = 10
+
+	return 1337;
 }
 
 int main()
 {
-    int a;
-    int b;
-    int c;
+	int a;
+	int b;
+	int c;
 
-    return_many_values(&a, &b, &c);
+	int result = foo(&a, &b, &c);
 
-    std::cout << "a = " << a << '\n';
-    std::cout << "b = " << b << '\n';
-    std::cout << "c = " << c << '\n';
-
-    //remove_char(text, 'a');
-
-    // @1
-    // hello
-    // hllo
-
-    // @2
-    // hello
-    // heo
-
-    // @4
-    // Hello. World.
-    // Hello! World!
+	std::cout << "a = " << a << '\n';
+	std::cout << "b = " << b << '\n';
+	std::cout << "c = " << c << '\n';
+	std::cout << "result = " << result << '\n';
 
 
+	/*{
+		wchar_t wc = 'Â'; // wide char
 
-    char user_input[32]{};
+		std::wcout << sizeof(wchar_t) << '\n';
+		std::wcout << wc << '\n';
 
-    //std::cin >> user_input;
+		//char text[16]{'H', 'e', 'l', 'l', 'o'};
 
-    std::cin.getline(user_input, 32);
+		char c = '\0';
 
-    //std::getline(std::cin, user_input, 32);
+		std::cout << (int)c << '\n';
 
-    std::cout << "input = " << user_input << '\n';
+		char garbage[4];
+		char text[] = "Hello world"; // char*
 
-    /* {
-        char c = '\0';
+		text[0] = 'h';
 
-        std::cout << (int)c << '\n';
+		const char* text2 = "Goodbye\0world !"; // const char*
 
-        char text[12] = "Hello world"; // Hello world\0 // char*
-        char text2[12]{ 'H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '\0' }; // char*
-        const char* text3 = "Hello world";
+		cout(text);
+		cout(text2);
+	}*/
 
-        text2[0] = 'h';
-        //text3[0] = 'h';
+	/*{
+		char* text = new char[16];
 
-        cout(text2);
-        cout(text3);
-    }*/
-    /*{
-        char* text3 = new char[16] {};
+		strcpy(text, "Hello world!");
 
-        strcpy(text3, "Hello 123");
+		cout(text);
 
-
-        cout(text3);
-
-        delete[] text3;
-    }*/
+		delete[] text;
+	}*/
 }

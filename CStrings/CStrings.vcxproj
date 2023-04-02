@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9b6fb96e-1977-4322-82ad-370a2f4d53b7}</ProjectGuid>
+    <ProjectGuid>{5e7b05c2-e9fb-4d50-8208-a273d11ee220}</ProjectGuid>
     <RootNamespace>CStrings</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
