@@ -16,6 +16,9 @@ void SetCursor(int x, int y)
 
 int main()
 {
+
+    char text[16] = "Hello";
+
     while (true)
     {
         if (_kbhit())
