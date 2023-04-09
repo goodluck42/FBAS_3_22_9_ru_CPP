@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultidimensionalDynamicArrays", "MultidimensionalDynamicArrays.vcxproj", "{402A08B7-73F6-4F14-A9A2-09511A65999B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Debug|x64.ActiveCfg = Debug|x64
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Debug|x64.Build.0 = Debug|x64
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Debug|x86.ActiveCfg = Debug|Win32
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Debug|x86.Build.0 = Debug|Win32
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Release|x64.ActiveCfg = Release|x64
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Release|x64.Build.0 = Release|x64
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Release|x86.ActiveCfg = Release|Win32
+		{402A08B7-73F6-4F14-A9A2-09511A65999B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B6C10A8-D9E6-438D-BE19-565516D75A45}
+	EndGlobalSection
+EndGlobal
