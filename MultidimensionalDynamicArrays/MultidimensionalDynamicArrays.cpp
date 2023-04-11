@@ -184,7 +184,6 @@ int main()
 
 		size_t* sizes = new size_t[rows]{};
 
-
 		for (size_t i = 0; i < rows; ++i)
 		{
 			size_t cols;
