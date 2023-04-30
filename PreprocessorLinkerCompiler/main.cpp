@@ -8,7 +8,7 @@ void ShowMessage(const char* text)
 {
 // && || ! >, <, ==, !=, >=, <=
 
-//#ifdef WIN64 
+//#ifdef WIN64
 #if defined(WIN64)
 	std::cout << "Message from Windows: " << text << '\n';
 #elif defined(LINUX)
@@ -22,6 +22,21 @@ void ShowMessage(const char* text)
 #define MAX(a, b) ...
 
 #define NUMBER 42
+
+#if ...
+void a(int);
+void b(int);
+void c(int);
+#elif ...
+void a(float);
+void b(float);
+void c(float);
+#elif ...
+void a(double);
+void b(double);
+void c(double);
+
+#endif
 
 int main()
 {
