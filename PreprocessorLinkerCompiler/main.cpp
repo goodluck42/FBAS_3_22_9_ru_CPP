@@ -19,10 +19,20 @@ void ShowMessage(const char* text)
 #endif
 }
 
+#define MAX(a, b) ...
 
+#define NUMBER 42
 
 int main()
 {
+	int a = NUMBER;
+
+#undef NUMBER
+
+	// std::cout << NUMBER; // ERROR
+
+	std::cout << (a == 5 ? "a is 5" : "a is not 5");
+
 	ShowMessage("Hello");
 
 	// char* buffer = new char[16];
