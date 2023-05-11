@@ -3,6 +3,6 @@
 
 int main()
 {
-    std::cout << mult(5) << '\n';
+    std::cout << square(5) << '\n';
     system("pause");
 }

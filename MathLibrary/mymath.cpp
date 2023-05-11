@@ -19,3 +19,10 @@ int mult(int a, int b)
 {
 	return a * b;
 }
+
+//template<typename T> T square(T a)
+//{
+//	return a * a;
+//}
+//
+//template int square<int>(int);
