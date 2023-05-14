@@ -58,11 +58,79 @@ struct A
 	char c;
 };
 
+
+
+struct Student
+{
+	char* name;
+	size_t _name_size;
+	int age;
+};
+
+
+void write_Student(Student& student)
+{
+	FILE* file{};
+
+	fopen_s(&file, "studs.bin", "wb");
+
+	if (file != nullptr)
+	{
+		fwrite(&student._name_size, sizeof(size_t), 1, file);
+		fwrite(student.name, sizeof(char), student._name_size, file);
+		fwrite(&student.age, sizeof(int), 1, file);
+
+		fclose(file);
+	}
+}
+
+Student* read_Student()
+{
+	FILE* file{};
+
+	fopen_s(&file, "studs.bin", "rb");
+
+	if (file != nullptr)
+	{
+		Student* student = new Student;
+
+		fread(&student->_name_size, sizeof(size_t), 1, file);
+
+		student->name = new char[student->_name_size] {};
+
+		fread(student->name, sizeof(char), student->_name_size, file);
+		fread(&student->age, sizeof(int), 1, file);
+
+		fclose(file);
+
+		return student;
+	}
+
+	return nullptr;
+}
+
 int main()
 {
-	std::cout << sizeof(Time) << '\n';
+	Student* student = read_Student();
+
+	std::cout << student->age << '\n';
+	std::cout << student->name << '\n';
+	std::cout << student->_name_size << '\n';
+
+	delete student;
+
+	/*student.age = 25;
+	student._name_size = 32;
+	student.name = new char[student._name_size];
+
+
+	strcpy_s(student.name, student._name_size, "Ikram");
+
+	write_Student(student);*/
+
+	/*std::cout << sizeof(Time) << '\n';
 	std::cout << sizeof(Test) << '\n';
-	std::cout << sizeof(A) << '\n';
+	std::cout << sizeof(A) << '\n';*/
 
 	/*Char c{};
 
